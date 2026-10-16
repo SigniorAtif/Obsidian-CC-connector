@@ -113,5 +113,8 @@ Maintainers only.
    both plugin manifests and `versions.json`, commits, and tags the commit
    with the bare version (`0.2.0`, no `v`, as Obsidian requires).
 3. Push the commit and the tag: `git push --follow-tags`.
-4. The **Release** workflow builds the plugin and opens a draft release with
-   `main.js` and `manifest.json` attached. Check it, then publish it.
+4. The **Release** workflow builds the plugin, attests `main.js` and
+   `manifest.json` (a signed record that this workflow built them), and opens
+   a draft release with both attached. Check it, then publish it.
+5. On [community.obsidian.md](https://community.obsidian.md), open the plugin
+   and click **Check for new releases**, so the new version gets reviewed.
