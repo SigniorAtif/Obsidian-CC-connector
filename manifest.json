@@ -1,7 +1,7 @@
 {
   "id": "claude-code-connector",
   "name": "Claude Code Connector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minAppVersion": "1.5.0",
   "description": "Share the note you are reading, the section you are in and the text you select with Claude Code.",
   "author": "Atif Ahmed",

@@ -6,6 +6,20 @@ All notable changes to this project are listed here. The format follows
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-17
+
+### Changed
+
+- Obsidian's settings search now finds both settings, by name or by words
+  like "pause" and "privacy" (Obsidian 1.13 and newer). Older Obsidian
+  versions keep the same settings tab as before.
+
+### Security
+
+- Each release's `main.js` and `manifest.json` now come with a GitHub
+  artifact attestation, so you can check a download was built by this
+  repository's release workflow (see "Check a download" in the README).
+
 ## [0.1.0] - 2026-10-16
 
 ### Added
@@ -19,5 +33,6 @@ All notable changes to this project are listed here. The format follows
 - A status bar item, a command and a settings tab to pause sharing, and a
   setting to share with every Claude Code session.
 
-[Unreleased]: https://github.com/SigniorAtif/Obsidian-CC-connector/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/SigniorAtif/Obsidian-CC-connector/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/SigniorAtif/Obsidian-CC-connector/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/SigniorAtif/Obsidian-CC-connector/releases/tag/0.1.0
