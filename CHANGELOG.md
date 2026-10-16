@@ -6,6 +6,8 @@ All notable changes to this project are listed here. The format follows
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-17
+
 ### Changed
 
 - Obsidian's settings search now finds both settings, by name or by words
@@ -31,5 +33,6 @@ All notable changes to this project are listed here. The format follows
 - A status bar item, a command and a settings tab to pause sharing, and a
   setting to share with every Claude Code session.
 
-[Unreleased]: https://github.com/SigniorAtif/Obsidian-CC-connector/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/SigniorAtif/Obsidian-CC-connector/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/SigniorAtif/Obsidian-CC-connector/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/SigniorAtif/Obsidian-CC-connector/releases/tag/0.1.0

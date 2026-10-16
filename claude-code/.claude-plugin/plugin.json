@@ -1,6 +1,6 @@
 {
   "name": "obsidian-context",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tells Claude which Obsidian note you are reading, the section you are in and the text you selected. Needs the Claude Code Connector plugin in Obsidian.",
   "author": {
     "name": "Atif Ahmed",
@@ -9,5 +9,10 @@
   "homepage": "https://github.com/SigniorAtif/Obsidian-CC-connector",
   "repository": "https://github.com/SigniorAtif/Obsidian-CC-connector",
   "license": "MIT",
-  "keywords": ["obsidian", "notes", "context", "hooks"]
+  "keywords": [
+    "obsidian",
+    "notes",
+    "context",
+    "hooks"
+  ]
 }
