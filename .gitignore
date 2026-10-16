@@ -1,0 +1,12 @@
+node_modules/
+
+# Build output: attached to each GitHub release, never committed.
+main.js
+*.js.map
+
+# Written by the plugin when it runs inside a vault during development.
+data.json
+
+.DS_Store
+.idea/
+.vscode/
