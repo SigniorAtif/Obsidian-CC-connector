@@ -18,6 +18,7 @@ import {
   Plugin,
   type TFile,
 } from 'obsidian';
+import { ConnectorSettingTab } from './settings';
 import {
   type ActiveNote,
   type PluginData,
@@ -42,7 +43,7 @@ interface RenderedSection {
 }
 
 export default class ClaudeCodeConnector extends Plugin {
-  data: PluginData = { recent: [], paused: false };
+  data: PluginData = { recent: [], paused: false, shareEverywhere: false };
   private statusEl!: HTMLElement;
   private lastWritten = '';
   private scheduleWrite!: Debouncer<[], void>;
@@ -53,6 +54,7 @@ export default class ClaudeCodeConnector extends Plugin {
     this.data = {
       recent: Array.isArray(saved?.recent) ? saved.recent : [],
       paused: saved?.paused === true,
+      shareEverywhere: saved?.shareEverywhere === true,
     };
     this.scheduleWrite = debounce(() => this.writeState(), 300, true);
     this.scheduleSave = debounce(() => void this.save(), 2000, true);
@@ -68,6 +70,7 @@ export default class ClaudeCodeConnector extends Plugin {
       name: 'Pause or resume sharing',
       callback: () => this.setPaused(!this.data.paused),
     });
+    this.addSettingTab(new ConnectorSettingTab(this.app, this));
 
     // The editor reports every selection change, including keyboard ones the
     // page never sees as a selection event.
@@ -112,6 +115,12 @@ export default class ClaudeCodeConnector extends Plugin {
     void this.save();
     if (paused) this.clearState();
     else this.writeState();
+  }
+
+  setShareEverywhere(on: boolean) {
+    this.data.shareEverywhere = on;
+    void this.save();
+    this.writeState();
   }
 
   private save() {
@@ -192,6 +201,7 @@ export default class ClaudeCodeConnector extends Plugin {
       version: STATE_VERSION,
       pid: process.pid,
       vault: this.vaultPath(),
+      shareEverywhere: this.data.shareEverywhere,
       active: view instanceof FileView && file ? this.describe(view, file) : null,
       openTabs: this.openTabs(),
       recent: this.data.recent.slice(0, MAX_RECENT_SHARED),

@@ -15,6 +15,9 @@ export default defineConfig([
     },
     rules: {
       'obsidianmd/ui/sentence-case': ['warn', { brands: ['Claude Code', 'Claude'] }],
+      // The declarative settings API needs Obsidian 1.13; the classic tab
+      // works back to minAppVersion. Two settings do not need search.
+      'obsidianmd/settings-tab/prefer-setting-definitions': 'off',
     },
   },
 

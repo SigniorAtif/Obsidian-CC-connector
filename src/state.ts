@@ -10,6 +10,8 @@ export interface ReadingState {
   pid: number;
   /** Absolute path of the vault folder, or null for a vault not on disk. */
   vault: string | null;
+  /** Share with every Claude Code session, not only those inside the vault's project. */
+  shareEverywhere: boolean;
   active: ActiveNote | null;
   /** Vault-relative paths of the open tabs in the main area. */
   openTabs: string[];
@@ -49,4 +51,5 @@ export interface RecentNote {
 export interface PluginData {
   recent: RecentNote[];
   paused: boolean;
+  shareEverywhere: boolean;
 }
