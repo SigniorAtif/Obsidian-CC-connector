@@ -17,7 +17,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "node --test",
-    "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm build"
+    "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm build",
+    "version": "node version-bump.mjs && git add manifest.json versions.json claude-code/.claude-plugin/plugin.json"
   },
   "devDependencies": {
     "@codemirror/state": "6.7.6",
