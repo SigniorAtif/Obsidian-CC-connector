@@ -6,6 +6,12 @@ All notable changes to this project are listed here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- Obsidian's settings search now finds both settings, by name or by words
+  like "pause" and "privacy" (Obsidian 1.13 and newer). Older Obsidian
+  versions keep the same settings tab as before.
+
 ## [0.1.0] - 2026-10-16
 
 ### Added
