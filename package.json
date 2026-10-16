@@ -1,0 +1,35 @@
+{
+  "name": "obsidian-cc-connector",
+  "version": "0.1.0",
+  "description": "Share the note you are reading in Obsidian with Claude Code.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "Atif Ahmed",
+  "repository": "github:SigniorAtif/Obsidian-CC-connector",
+  "packageManager": "pnpm@12.10.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "check": "pnpm typecheck && pnpm lint && pnpm build"
+  },
+  "devDependencies": {
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.13",
+    "@eslint/js": "9.39.5",
+    "@eslint/json": "0.14.0",
+    "@types/node": "26.6.5",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.5",
+    "eslint-plugin-obsidianmd": "0.4.2",
+    "globals": "17.13.0",
+    "obsidian": "1.14.4",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2"
+  }
+}
