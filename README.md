@@ -55,19 +55,18 @@ You need both halves, a desktop Obsidian (1.5 or newer) and
 
 ### 1. The Obsidian plugin
 
-The plugin is not in Obsidian's Community plugins list yet. Until it is, use
-either of these:
-
-- **By hand:** download `main.js` and `manifest.json` from the
-  [latest release](https://github.com/SigniorAtif/Obsidian-CC-connector/releases/latest)
-  into `<your vault>/.obsidian/plugins/claude-code-connector/`. In Obsidian,
-  open **Settings → Community plugins**, turn community plugins on, click the
-  refresh icon next to **Installed plugins** and switch on
-  **Claude Code Connector**.
-- **With [BRAT](https://github.com/TfTHacker/obsidian42-brat):** add the beta
-  plugin `SigniorAtif/Obsidian-CC-connector`. BRAT also keeps it up to date.
+In Obsidian, open **Settings → Community plugins**, turn community plugins on
+if they are off, click **Browse**, search for **Claude Code Connector**, then
+install and enable it. Its page in the Obsidian community directory is
+[here](https://community.obsidian.md/plugins/claude-code-connector).
 
 The status bar now shows **Claude: sharing**.
+
+To install by hand instead, download `main.js` and `manifest.json` from the
+[latest release](https://github.com/SigniorAtif/Obsidian-CC-connector/releases/latest)
+into `<your vault>/.obsidian/plugins/claude-code-connector/`, click the
+refresh icon next to **Installed plugins** and switch on
+**Claude Code Connector**.
 
 ### 2. The Claude Code plugin
 
