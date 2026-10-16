@@ -1,0 +1,17 @@
+{
+  "name": "obsidian-cc-connector",
+  "owner": {
+    "name": "Atif Ahmed",
+    "url": "https://github.com/SigniorAtif"
+  },
+  "metadata": {
+    "description": "The Claude Code side of the Claude Code Connector Obsidian plugin."
+  },
+  "plugins": [
+    {
+      "name": "obsidian-context",
+      "source": "./claude-code",
+      "description": "Tells Claude which Obsidian note you are reading, the section you are in and the text you selected."
+    }
+  ]
+}
