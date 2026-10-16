@@ -1,13 +1,17 @@
 name: Release
 
-# Pushing a version tag ("0.2.0", made by `npm version`) builds the plugin and
-# opens a draft GitHub release with the two files Obsidian downloads.
+# Pushing a version tag ("0.2.0", made by `npm version`) builds the plugin,
+# attests the two files Obsidian downloads, and opens a draft GitHub release
+# with them.
 on:
   push:
     tags: ['*']
 
 permissions:
-  contents: write
+  contents: write # create the release
+  id-token: write # get a short-lived signing certificate for the attestation
+  attestations: write # store the attestation on this repository
+  artifact-metadata: write # record the attested files
 
 jobs:
   release:
@@ -29,6 +33,15 @@ jobs:
             echo "Tag $GITHUB_REF_NAME does not match manifest.json version $version"
             exit 1
           fi
+
+      # A signed record of each file's SHA-256, the commit and this workflow,
+      # which `gh attestation verify` checks a download against.
+      - name: Attest the release files
+        uses: actions/attest@v4
+        with:
+          subject-path: |
+            main.js
+            manifest.json
 
       - name: Create a draft release
         env:

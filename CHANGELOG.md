@@ -12,6 +12,12 @@ All notable changes to this project are listed here. The format follows
   like "pause" and "privacy" (Obsidian 1.13 and newer). Older Obsidian
   versions keep the same settings tab as before.
 
+### Security
+
+- Each release's `main.js` and `manifest.json` now come with a GitHub
+  artifact attestation, so you can check a download was built by this
+  repository's release workflow (see "Check a download" in the README).
+
 ## [0.1.0] - 2026-10-16
 
 ### Added

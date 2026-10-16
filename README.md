@@ -80,6 +80,16 @@ In Claude Code:
 
 Start a new session. That's it.
 
+### Check a download (optional)
+
+From 0.1.1 on, GitHub signs a record of each release file as its release
+workflow builds it. With the [GitHub CLI](https://cli.github.com), this
+confirms that a `main.js` you have was built from this repository, unchanged:
+
+```sh
+gh attestation verify main.js --repo SigniorAtif/Obsidian-CC-connector
+```
+
 ## When Claude gets the context
 
 The hook adds the block to a prompt only when all of these hold:
